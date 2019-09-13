@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>TrueTravel - Home</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <style>
+        body {
+            /*border: 1px solid red;*/
+            height: auto;
+            background-color: #e3f2fd;
+        }
+
+        #first_section {
+            margin-top: 5%;
+        }
+
+        table {
+            border: 1px solid grey;
+        }
+
+        #first_section .row {
+           /* border: 1px solid red; */
+            padding: 2% 0%;
+        }
+
+        th, tr, td {
+            /*border: 2px solid pink;*/
+            text-align: center;
+        }
+    </style>
+
+    <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark  ">
+        <a class="navbar-brand" href="#">TrueTravel</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="teste.html">Requests</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">My Personal Details</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="first_section" class="container">
+        <div class="row justify-content-between">
+            <h3>My Open Requests</h2>
+            <button id="goTo_RequestDetail" requestId="1" type="button" class="btn btn-dark">New Request</button>
+        </div>
+
+        <div class="row">
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">Id</th>
+                            <th scope="col">Project</th>
+                            <th scope="col">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>BusyBus</td>
+                            <td>requested</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>CineSpoiler</td>
+                            <td>requested</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>TrueTravel</td>
+                            <td>inAgency</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+    </div>
+
+</body>
+
+<script src="common.js"></script>
+<script src="home.js"></script>
+
+</html>
