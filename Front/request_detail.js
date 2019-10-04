@@ -1,7 +1,7 @@
 let requestId = window.sessionStorage.getItem('requestId');
 
 function getRequestById(requestId) {
-    let url = "http://localhost:8080/Main/api/requests/" + requestId;
+    let url = "http://localhost:8080/ApiGateway/api/requests/" + requestId;
 
     let xhttp = requesterBuilder("GET", url);
 

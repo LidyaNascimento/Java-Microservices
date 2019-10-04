@@ -10,7 +10,7 @@ function getRequests() {
 }
 
 function loginAsRicardo() {
-    let url = "http://localhost:8080/appweb4/api/users/login";
+    let url = "http://localhost:8080/ApiGateway/api/users/login";
 
     let usuario = {
         nome: "ricardo",
