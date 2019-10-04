@@ -53,8 +53,7 @@ public class UserService {
 			if (login_user != null) {
 				String token = JwTokenHelper.getInstance().generateToken(user.getNome(), user.getSenha());
 				return Response
-						.status(200)
-						.entity(login_user)
+						.ok(token)
 						.header(AUTHORIZATION, "Bearer " + token)
 						.build();
 			}
@@ -69,9 +68,10 @@ public class UserService {
 
 	@POST
 	@Path("/cadastrar")
-	@Consumes(APPLICATION_FORM_URLENCODED)
-	public Response create(@FormParam("login") String login, @FormParam("password") String password) {
-		User user = userBean.cadastrarUsuario(login, PasswordUtils.digestPassword(password));
+	@Consumes(MediaType.APPLICATION_JSON)
+	@Produces(MediaType.APPLICATION_JSON)
+	public Response create(User user) {
+		user = userBean.cadastrarUsuario(user.getNome(), PasswordUtils.digestPassword(user.getSenha()));
 		if (user != null)
 			return Response.ok(user).build();
 		return Response.status(NOT_FOUND).build();
